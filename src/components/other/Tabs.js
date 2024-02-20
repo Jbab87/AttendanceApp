@@ -1,12 +1,12 @@
 import React from 'react'
 import { View, StyleSheet } from 'react-native'
-import CurrentWeather from './CurrentWeather'
-import UpcomingEvents from './UpcomingEvents'
+import CurrentWeather from '../pages/CurrentWeather'
+import UpcomingEvents from '../pages/UpcomingEvents'
 import { NavigationContainer } from '@react-navigation/native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { Feather } from '@expo/vector-icons'
-import UserCreation from './UserCreation'
-import EventCreation from './EventCreation'
+import UserCreation from '../pages/UserCreation'
+import EventCreation from '../pages/EventCreation'
 
 const Tab = createBottomTabNavigator()
 

@@ -3,8 +3,8 @@ import { StyleSheet, View } from 'react-native'
 import { NavigationContainer } from '@react-navigation/native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { ActivityIndicator } from 'react-native'
-import Tabs from './src/components/Tabs'
 import * as Location from 'expo-location'
+import Tabs from './src/components/other/Tabs'
 
 const App = () => {
 const [loading, setLoading] = useState(true)

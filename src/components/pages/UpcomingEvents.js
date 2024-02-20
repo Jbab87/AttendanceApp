@@ -27,7 +27,7 @@ const UpcomingEvents = () => {
 
   return (
     <SafeAreaView style={styles.container}> 
-            <ImageBackground source={require("../../assets/city.jpg")} style={styles.image}>
+            <ImageBackground source={require("../../../assets/city.jpg")} style={styles.image}>
 
         <Text style={styles.text}>
             Upcoming Events

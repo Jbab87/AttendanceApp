@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { View, Text, StyleSheet, TextInput } from "react-native";
 import { Feather } from '@expo/vector-icons';
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
-import CustomButton from "./CustomButton";
-import myAlert from "./Alert";
-import { personService } from "../services/PersonService";
+import CustomButton from "../other/CustomButton";
+import myAlert from "../other/Alert";
+import { personService } from "../../services/PersonService";
 
 
 

@@ -3,12 +3,12 @@ import { View, Text, StyleSheet, TextInput, Alert,  } from "react-native";
 import { Picker } from "@react-native-picker/picker"; 
 import {Feather} from '@expo/vector-icons'
 import { doc, setDoc} from "firebase/firestore"
-import {database} from "../database/FirebaseConfig"
+import {database} from "../../database/FirebaseConfig"
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
-import CustomButton from "./CustomButton";
-import { createEventSubmissionAlert } from "../../CustomAlert";
-import myAlert from "./Alert";
-import { EventService } from "../services/EventService";
+import CustomButton from "../other/CustomButton";
+import { createEventSubmissionAlert } from "../../../CustomAlert";
+import myAlert from "../other/Alert";
+import { EventService } from "../../services/EventService";
 
 
 

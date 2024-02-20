@@ -3,7 +3,7 @@ import { View, TouchableOpacity, Text, StyleSheet, TextInput, KeyboardAvoidingVi
 import {SafeAreaView} from "react-native-safe-area-context"
 import {Feather} from '@expo/vector-icons'
 import {Firestore, collection, doc, setDoc} from "firebase/firestore"
-import {database} from "../database/FirebaseConfig"
+import {database} from "../../database/FirebaseConfig"
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 
 const personRef = doc(database, "Person","BTTDXkhLITJKg7ZrQXEj")

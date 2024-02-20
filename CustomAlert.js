@@ -1,6 +1,6 @@
 import { Alert } from "react-native";
 import { addPersonToDatabase, personService } from "./src/services/PersonService";
-import UserCreation from "./src/components/UserCreation";
+import UserCreation from "./src/components/pages/UserCreation";
 
 
 
