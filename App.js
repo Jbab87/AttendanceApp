@@ -4,7 +4,7 @@ import { NavigationContainer } from '@react-navigation/native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { ActivityIndicator } from 'react-native'
 import * as Location from 'expo-location'
-import Tabs from './src/components/other/Tabs'
+import Tabs from './src/components/pages/Tabs'
 
 const App = () => {
 const [loading, setLoading] = useState(true)

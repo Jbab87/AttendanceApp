@@ -1,12 +1,13 @@
 import React from 'react'
 import { View, StyleSheet } from 'react-native'
-import CurrentWeather from '../pages/CurrentWeather'
-import UpcomingEvents from '../pages/UpcomingEvents'
+import CurrentWeather from './CurrentWeather'
+import UpcomingEvents from './UpcomingEvents'
 import { NavigationContainer } from '@react-navigation/native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { Feather } from '@expo/vector-icons'
-import UserCreation from '../pages/UserCreation'
-import EventCreation from '../pages/EventCreation'
+import UserCreation from './UserCreation'
+import EventCreation from './EventCreation'
+import EventsList from './EventsList'
 
 const Tab = createBottomTabNavigator()
 
@@ -77,9 +78,25 @@ const Tabs = () => {
               size={25}
               color={focused ? 'tomato' : 'black'}
             />
+            
           )
         }}
       />
+ <Tab.Screen
+        name={'EventsList'}
+        component={EventsList}
+        options={{
+          tabBarIcon: ({ focused }) => (
+            <Feather
+              name={"calendar"}
+              size={25}
+              color={focused ? 'tomato' : 'black'}
+            />
+            
+          )
+        }}
+      />
+      
     </Tab.Navigator>
   )
 }
