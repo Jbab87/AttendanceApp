@@ -5,6 +5,9 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { ActivityIndicator } from 'react-native'
 import * as Location from 'expo-location'
 import Tabs from './src/components/pages/Tabs'
+import EventsList from './src/components/pages/EventsList'
+import { func } from 'prop-types'
+import Events from './src/components/pages/Events'
 
 const App = () => {
 const [loading, setLoading] = useState(true)
@@ -35,10 +38,12 @@ const [error, setError] = useState(null)
 //   )
 // }
 
+
   return (
     <NavigationContainer>
-      <Tabs />
+         <Tabs/>
     </NavigationContainer>
+    
   )
 }
 

@@ -8,6 +8,10 @@ import { Feather } from '@expo/vector-icons'
 import UserCreation from './UserCreation'
 import EventCreation from './EventCreation'
 import EventsList from './EventsList'
+import { EventStackScreen } from './EventStackScreen'
+import Events from './Events'
+
+
 
 const Tab = createBottomTabNavigator()
 
@@ -26,9 +30,24 @@ const Tabs = () => {
         headerTitleStyle: {
           fontWeight: 'bold',
           fontSize: 25
-        }
+        },
+        headerShown: false
       }}
     >
+      <Tab.Screen
+        name={'Events'}
+        component={Events}
+        options={{
+          tabBarIcon: ({ focused }) => (
+            <Feather
+              name={"calendar"}
+              size={25}
+              color={focused ? 'tomato' : 'black'}
+            />
+            
+          )
+        }}
+      />
       <Tab.Screen
         name={"Current"}
         component={CurrentWeather}
@@ -68,8 +87,8 @@ const Tabs = () => {
           )
         }}
       />
-       <Tab.Screen
-        name={'Events'}
+       {/* <Tab.Screen
+        name={'EventsCreation'}
         component={EventCreation}
         options={{
           tabBarIcon: ({ focused }) => (
@@ -78,11 +97,12 @@ const Tabs = () => {
               size={25}
               color={focused ? 'tomato' : 'black'}
             />
-            
-          )
+          ),
+          tabBarStyle: {display: "none"}
+
         }}
-      />
- <Tab.Screen
+      /> */}
+ {/* <Tab.Screen
         name={'EventsList'}
         component={EventsList}
         options={{
@@ -92,10 +112,20 @@ const Tabs = () => {
               size={25}
               color={focused ? 'tomato' : 'black'}
             />
-            
-          )
+          ),
+          tabBarStyle: {display: "none"}
         }}
-      />
+      /> */}
+    
+    <Tab.Screen
+    name={"Event"}
+      component={EventStackScreen}
+      options={{
+        // headerShown: false
+      }}
+    
+    
+    />
       
     </Tab.Navigator>
   )
