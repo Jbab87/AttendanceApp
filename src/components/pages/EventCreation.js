@@ -16,7 +16,6 @@ const EventCreation = () => {
     const [eventName, setEventName] = useState('')
     const [recurring, setRecurring] = useState(null)
 
-    console.log(recurring)
      const handleEventSubmission = ()  => {
         if (eventName.length > 0 && recurring !== null) {
             myAlert(() => EventService.addEventToDatabase(eventName, recurring))

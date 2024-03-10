@@ -1,4 +1,4 @@
-import { collection, doc,getDoc,getDocs,setDoc } from "firebase/firestore";
+import { addDoc, collection, doc,getDoc,getDocs,setDoc } from "firebase/firestore";
 import { database } from "../database/FirebaseConfig";
 import { isSearchBarAvailableForCurrentPlatform } from "react-native-screens";
 
@@ -19,7 +19,7 @@ const EventService = {
     
     // no event handling - if doc does not exist - it will be created
     addEventToDatabase : async (eventName, recurring) => {
-            await setDoc(doc(database, eventCollectionPath , "event4"), {
+            await addDoc(collection(database, eventCollectionPath), {
                 eventName : eventName,
                 recurring: recurring
             });
