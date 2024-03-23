@@ -17,7 +17,7 @@ const onPress = () => {
 
   return (
       <TouchableOpacity style={styles.container} onPress={props.onPress}>
-        <Text style={styles.text}>Confirm</Text>
+        <Text style={styles.text}>{props.text}</Text>
       </TouchableOpacity>
 
   )
@@ -35,8 +35,6 @@ const styles = StyleSheet.create({
     backgroundColor: 'blue',
     borderRadius: 8,
     padding: 5,
-    marginTop: 80,
-    marginBottom: 200
    },
 
    text: {

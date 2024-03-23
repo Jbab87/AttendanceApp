@@ -10,6 +10,7 @@ import EventCreation from './EventCreation'
 import EventsList from './EventsList'
 import { EventStackScreen } from './EventStackScreen'
 import Events from './Events'
+import EventDetails from './EventDetailsPage'
 
 
 
@@ -35,19 +36,23 @@ const Tabs = () => {
       }}
     >
       <Tab.Screen
-        name={'Events'}
-        component={Events}
-        options={{
-          tabBarIcon: ({ focused }) => (
-            <Feather
-              name={"calendar"}
-              size={25}
-              color={focused ? 'tomato' : 'black'}
-            />
-            
-          )
-        }}
-      />
+    name={"EventDetails"}
+      component={EventDetails}
+      options={{
+        // headerShown: false
+        tabBarIcon: ({ focused }) => (
+          <Feather
+            name={"calendar"}
+            size={25}
+            color={focused ? 'tomato' : 'black'}
+          />
+          
+        )
+        
+      }}
+    
+    
+    />
       <Tab.Screen
         name={"Current"}
         component={CurrentWeather}
@@ -122,6 +127,15 @@ const Tabs = () => {
       component={EventStackScreen}
       options={{
         // headerShown: false
+        tabBarIcon: ({ focused }) => (
+          <Feather
+            name={"calendar"}
+            size={25}
+            color={focused ? 'tomato' : 'black'}
+          />
+          
+        )
+        
       }}
     
     

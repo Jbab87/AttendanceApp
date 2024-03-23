@@ -9,15 +9,17 @@ import CustomButton from "../other/CustomButton";
 import { createEventSubmissionAlert } from "../../../CustomAlert";
 import myAlert from "../other/Alert";
 import { EventService } from "../../services/EventService";
+import { useRoute } from "@react-navigation/native";
 
 
 
-const EventCreation = (props) => {
+const EventDetails = (props) => {
 
-  route = props.route.name
+  const route = useRoute();
   console.log(route)
     const [eventName, setEventName] = useState('')
     const [recurring, setRecurring] = useState(null)
+    // const {id} = route.params
 
      const handleEventSubmission = ()  => {
         if (eventName.length > 0 && recurring !== null) {
@@ -27,43 +29,23 @@ const EventCreation = (props) => {
     }
        
     }
-
+ 
   
   return (
-    <KeyboardAwareScrollView style={styles.wrapper} > 
 <View style={styles.container}>
     
       <Text style={styles.text}>
-        Create an Event
       </Text>
-      <Text style={styles.label}>Event name</Text>
-      <TextInput 
-      style={styles.input}
-      placeholder="Input Event Name"
-      onChangeText={setEventName}
-      value = {eventName}
-      />
-            <Text style={styles.text}>Select an option:</Text>
-      <Picker
-      style = {styles.dropdown}
-        selectedValue={recurring}
-        onValueChange={(itemValue) => setRecurring(itemValue)}
-        prompt="Is this event recurring?"
-      >
-      
-      < Picker.Item label="Is this event recurring" value={null} enabled={false}/>
-        <Picker.Item label="true" value={true}/>
-        <Picker.Item label="false" value= {false}/>
+      <Text style={styles.label}>Event name: </Text>
+      <Text style={styles.label}>Is this event recurring?: </Text>
 
-      </Picker>
+  
 
       
      <CustomButton
-      text = "Create Event"
-        onPress = {handleEventSubmission}
+     text = "Edit Event"
      ></CustomButton>
     </View>
-</KeyboardAwareScrollView>
 
   )
 
@@ -126,4 +108,4 @@ const styles = StyleSheet.create({
 
 
 
-export default EventCreation;
+export default EventDetails;

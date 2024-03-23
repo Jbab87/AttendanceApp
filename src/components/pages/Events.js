@@ -47,13 +47,18 @@ const Events = (props) => {
           </TouchableOpacity>
 
 
-          <TouchableOpacity style={styles.box} onPress={()=> props.navigation.navigate("EventsList")}>
+          <TouchableOpacity style={styles.box} onPress={()=> props.navigation.navigate("EventsListStack")}>
             <View >
               <Text>View Events</Text>
             </View>
           </TouchableOpacity>
         
        
+          <TouchableOpacity style={styles.box} onPress={()=> props.navigation.navigate("EventsListStack", {screen: "EventDetails"} )}>
+            <View >
+              <Text> Event Details</Text>
+            </View>
+          </TouchableOpacity>
     </SafeAreaView>
 
   )
